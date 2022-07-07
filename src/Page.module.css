@@ -1,0 +1,16 @@
+.Text {
+  display: flex;
+}
+.Text span {
+  padding: 10px;
+}
+.content * {
+  filter: grayscale(1) sepia(0.5) saturate(0.5) hue-rotate(70deg);
+}
+.post_title {
+  margin-bottom: 15px;
+  display: flex;
+}
+.post_titles {
+  margin-top: 50px;
+}

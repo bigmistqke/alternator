@@ -1,0 +1,10 @@
+.Tracker {
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  min-height: 100vh;
+}
+.Tracker line {
+  stroke: rgb(125, 125, 125);
+  stroke-width: 0.5;
+}

@@ -1,0 +1,87 @@
+@font-face {
+  font-family: sneak;
+  src: url(/Sneak-Regular.woff);
+}
+
+:root {
+  --grey: #f9f9f9;
+  --panel-height: calc(20px + 20pt);
+}
+
+body {
+  font-family: sneak;
+  background: var(--grey);
+  font-size: 12pt;
+  letter-spacing: 0.085rem;
+  overflow-x: hidden;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--lightgrey) #f9f9f9;
+  scrollbar-border-left: 1px solid #f9f9f9;
+  scrollbar-border-radius: 10px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  padding-left: 2px;
+  padding-right: 2px;
+  user-select: none;
+}
+
+a:not(.no_fx):hover,
+a.active {
+  /* text-decoration: underline; */
+  background: black;
+  color: white;
+}
+.col_7,
+.col_6,
+.col_5,
+.col_4,
+.col_3,
+.col_2,
+.col_1 {
+  display: inline-block;
+}
+
+.col_7 > *,
+.col_6 > *,
+.col_5 > *,
+.col_4 > *,
+.col_3 > *,
+.col_2 > *,
+.col_1 > * {
+  width: 100%;
+}
+.col_9 {
+  width: calc(100% / 12 * 9);
+}
+.col_7 {
+  width: calc(100% / 12 * 7);
+}
+.col_6 {
+  width: calc(100% / 12 * 6);
+}
+.col_5 {
+  width: calc(100% / 12 * 5);
+}
+.col_4 {
+  width: calc(100% / 12 * 4);
+}
+.col_3 {
+  width: calc(100% / 12 * 3);
+}
+.col_2 {
+  width: calc(100% / 12 * 2);
+}
+.col_1 {
+  width: calc(100% / 12 * 1);
+}

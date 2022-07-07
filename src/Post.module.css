@@ -1,0 +1,21 @@
+.content * {
+  filter: grayscale(1) sepia(0.5) saturate(0.5) hue-rotate(70deg);
+  pointer-events: none;
+}
+.content {
+  cursor: pointer;
+  font-size: 8pt;
+}
+
+.content_container {
+  position: relative;
+  padding-right: 2.5px;
+  padding-left: 2.5px;
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+/* .content_container > * {
+  pointer-events: none;
+} */
