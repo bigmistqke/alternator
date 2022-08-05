@@ -17,9 +17,7 @@ const Library = () => {
   const data = useRouteData();
 
   createEffect(() => {
-    data()?.pages.library.forEach((item) => {
-      console.log(item.title);
-    });
+    data()?.pages.library.forEach((item) => {});
   });
 
   return (

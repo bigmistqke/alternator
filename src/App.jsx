@@ -3,7 +3,7 @@ import { Link, NavLink, Outlet } from "solid-app-router";
 import "./general.css";
 import s from "./App.module.css";
 import { createEffect, createSignal, onMount } from "solid-js";
-import Tracker from "./Tracker";
+import Tracker from "./components/Tracker";
 import { useStore } from "./Store";
 
 function Header(props) {
@@ -29,7 +29,7 @@ function Header(props) {
           </Link>
         </div>
         <div class="col_3">
-          <NavLink href="/in_situ">in situ</NavLink>
+          <NavLink href="/in situ">in situ</NavLink>
         </div>
         <div class="col_4">
           <NavLink href="/exhibitions">exhibitions</NavLink>
@@ -56,6 +56,8 @@ function Header(props) {
 
 function App() {
   const [store, setStore] = useStore();
+
+  onMount(() => {});
 
   createEffect(() => {
     window.scroll(0, parseInt(store.scroll_top));

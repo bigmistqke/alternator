@@ -31,8 +31,8 @@ a {
   cursor: pointer;
   text-decoration: none;
   color: black;
-  padding-left: 2px;
-  padding-right: 2px;
+  /*   padding-left: 2px;
+  padding-right: 2px; */
   user-select: none;
 }
 

@@ -1,5 +1,5 @@
 import { createSignal, For, onMount, Show } from "solid-js";
-import { useStore } from "./Store";
+import { useStore } from "../Store";
 import s from "./Tracker.module.css";
 
 function Tracker() {
@@ -8,7 +8,7 @@ function Tracker() {
   const [store, setStore] = useStore();
 
   onMount(() => {
-    window.onmousemove = ({ clientX, clientY }) => {
+    const track = ({ clientX, clientY }) => {
       if (performance.now() - last() > 250) {
         setStore("tracked_points", (points) => [
           ...points,
@@ -24,6 +24,9 @@ function Tracker() {
         setLast(performance.now());
       }
     };
+
+    window.onwheel = track;
+    window.onmousemove = track;
   });
 
   return (

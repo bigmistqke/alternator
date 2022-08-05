@@ -1,5 +1,5 @@
 import { For, onMount } from "solid-js";
-import { useStore } from "./Store";
+import { useStore } from "../Store";
 
 const CursorData = () => {
   const [store, setStore] = useStore();

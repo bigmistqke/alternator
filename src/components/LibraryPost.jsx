@@ -1,7 +1,7 @@
 import { Outlet, useParams, useRouteData } from "solid-app-router";
 import { createEffect, createSignal, onMount } from "solid-js";
 import Content from "./Content";
-import { array_shuffle } from "./helpers/Pure";
+import { array_shuffle } from "../helpers/Pure";
 import s from "./Post.module.css";
 import Link from "./Link";
 import Overlay from "./Overlay";
@@ -15,7 +15,7 @@ const LibraryPost = () => {
 
   createEffect(() => {
     if (!data()) return;
-    const posts = data().pages.library;
+    const posts = data().library;
 
     if (!posts) {
       return;
@@ -28,7 +28,7 @@ const LibraryPost = () => {
       ...m,
       type: "media",
     }));
-    console.log(crb_media, array_shuffle([...crb_media]));
+
     setContents(array_shuffle([...crb_media]));
   });
 
