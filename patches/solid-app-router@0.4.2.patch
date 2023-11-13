@@ -1,0 +1,12 @@
+diff --git a/dist/index.js b/dist/index.js
+index d824877b14965c29bc5b48b29d1e277ad26719f4..49c435b02d16212f99dd2a84487556636cf0a01f 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -869,6 +869,7 @@ function LinkBase(props) {
+ }
+ 
+ function Link(props) {
++  console.log("LINK ", props)
+   const to = useResolvedPath(() => props.href);
+   return createComponent$1(LinkBase, mergeProps$1(props, {
+     get to() {

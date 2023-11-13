@@ -1,0 +1,159 @@
+@font-face {
+  font-family: sneak;
+  src: url(/Sneak-Regular.woff);
+}
+
+:root {
+  --grey: #f9f9f9;
+  --panel-height: calc(20px + 20pt);
+}
+
+#root{
+
+}
+
+body {
+  font-family: sneak;
+  font-size: 12pt;
+  letter-spacing: 0.085rem;
+  overflow-x: hidden;
+}
+
+body.darkMode {
+  background: black;
+  color: white;
+}
+body.darkMode * {
+  color: white;
+  stroke-width: 1px !important;
+  stroke-dasharray: 5px 10px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--lightgrey) #f9f9f9;
+}
+body.darkMode * {
+  scrollbar-width: thin;
+  scrollbar-color: white black;
+}
+/* body:not(.darkMode) * {
+  scrollbar-gutter: stable both-edges;
+} */
+
+li {
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  /*   padding-left: 2px;
+  padding-right: 2px; */
+  user-select: none;
+}
+.darkMode a {
+  color: white;
+}
+
+.ql-tooltip a {
+  color: black !important;
+}
+
+a:not(.no_fx):hover,
+a.active {
+  /* text-decoration: underline; */
+  background: black;
+  color: white;
+}
+
+.darkMode a:not(.no_fx):hover,
+.darkMode a.active {
+  background: white;
+  color: black;
+}
+
+.col_7,
+.col_6,
+.col_5,
+.col_4,
+.col_3,
+.col_2,
+.col_1,
+.col_sm {
+  display: inline-block;
+}
+
+.col_7 > *,
+.col_6 > *,
+.col_5 > *,
+.col_4 > *,
+.col_3 > *,
+.col_2 > *,
+.col_1 > *,
+.col_sm > * {
+  width: 100%;
+}
+.col_12 {
+  width: calc(100% / 12 * 12);
+}
+.col_11 {
+  width: calc(100% / 12 * 11);
+}
+.col_10 {
+  width: calc(100% / 12 * 10);
+}
+.col_9 {
+  width: calc(100% / 12 * 9);
+}
+
+.col_8 {
+  width: calc(100% / 12 * 8);
+}
+
+.col_7 {
+  width: calc(100% / 12 * 7);
+}
+
+.col_6 {
+  width: calc(100% / 12 * 6);
+}
+
+.col_5 {
+  width: calc(100% / 12 * 5);
+}
+
+.col_4 {
+  width: calc(100% / 12 * 4);
+}
+
+.col_3 {
+  width: calc(100% / 12 * 3);
+}
+
+.col_2 {
+  width: calc(100% / 12 * 2);
+}
+
+.col_1 {
+  width: calc(100% / 12 * 1);
+}
+
+.col_sm {
+  width: calc(100% / 12 * 0.5);
+}
+
+.ql-container.ql-snow {
+  border: none;
+}
+.ql-editor {
+  font-family: sneak;
+  font-size: 18pt;
+}
+
+.ql-toolbar {
+  background: white;
+  height: var(--width);
+  border: 1px solid white !important;
+}

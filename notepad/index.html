@@ -1,0 +1,132 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ALTERNATOR</title>
+    <link rel="stylesheet" href="http://www.alternator.space/css/notepad.css">
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.2.0/split.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.css">
+    <script src="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.min.js"></script>
+</head>
+<body>
+    <div id="l-page__header">
+        <div id="l-main-menu">
+            <div class="l-main-menu__item col-sm-3"></div>
+            <div class="l-main-menu__item col-sm-3">
+                <div data-path="In Situ" class="l-main-menu__button button">in situ</div>
+            </div>
+            <div class="l-main-menu__item col-sm-4">
+                <div data-path="Exhibitions" class="l-main-menu__button button">exhibitions</div>
+            </div>
+            <div class="l-main-menu__item col-sm-2">
+                <div data-path="About" class="l-main-menu__button button">about</div>
+            </div>
+            <div class="l-main-menu__item   col-sm-3" style="/*! padding-top: 12.5px; */">
+                <img src="http://www.alternator.space/logo.png" class="l-main-menu__logo" style="/*! margin-top: 5; */">
+                <div id="l-main-menu-home" class="l-main-menu__button l-main-menu__alternator button minHide">alternator</div>
+            </div>
+            <div class="l-main-menu__item col-sm-1"></div>
+            <div class="l-main-menu__item col-sm-3">
+                <div data-path="Documents" class="l-main-menu__button button">documents</div>
+            </div>
+            <div class="l-main-menu__item col-sm-3">
+                <div data-path="show cursor data" class="l-main-menu__button l-main-menu__button--surveillance button"><span class="minHide">show</span> cursor <span class="minHide">data</span></div>
+            </div>
+            <div class="l-main-menu__item col-sm-5"></div>
+            <div class="l-main-menu__item col-sm-4">
+                <div data-path="Surse" class="l-main-menu__button button">surse</div>
+            </div>
+            <div class="l-main-menu__item col-sm-1">
+                <div  class="l-main-menu__button button selected">notepad</div>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div id="left" class="half">
+            <div class="filter">
+                <div class="title border big">Themes</div>
+                <div id="labels" class="border">
+                </div>
+                <div id="submit" class="border big button">FILTER</div>
+            </div>
+            <div class="result">
+                <div class="result__header border">
+                    <div class="title big">Themes: <span id="categories" class="result__themes small"></span></div>
+                    <div id="backToFilter" class="button result__back">FILTER OTHER<br>&#x2190; THEMES</div>
+                </div>
+                <div class="result__container">
+                </div>
+            </div>
+            <div class="focus">	
+            	<div class="focus__header border">
+            	    <div class="title big">Focus: <span id="categories" class="focus__name small"></span></div>
+            	    <div class="button focus__back">BACK</div>
+            	</div>
+            	<div class="focus__container">
+            	</div>
+            </div>
+            <!-- <div class="bottom big button">Load Folders</div> -->
+        </div>
+        <div id="right" class="half">
+            <div class="title big border">Notepad</div>
+            <div id="notepad">
+            </div>
+            <div class="bottom" id="notebook_bottom">
+                <div id="save" class="big button">Save</div>
+            </div>
+        </div>
+    </div>
+    <div id="templates">
+        <div data-template="videoPlayer" class="media media--video">
+            <div class="media__source-container">
+                <video class="media__source" loop></video>
+            </div>
+            <div class="controls">
+                <div class="controls__play button">play</div>
+                <div class="controls__timeline-container">
+                    <div class="controls__timeline"></div>
+                    <div class="controls__now"></div>
+                </div>
+            </div>
+        </div>
+        <div data-template="audioPlayer" class="media media--audio">
+            <audio class="media__source"></audio>
+            <div class="controls">
+                <div class="controls__play button">play</div>
+                <div class="controls__timeline-container">
+                    <div class="controls__timeline"></div>
+                    <div class="controls__now"></div>
+                </div>
+            </div>
+        </div>
+        <div data-template="label" class="label">
+            <div class="thumbnail__radio-container">
+                <div class="thumbnail__radio"></div>
+            </div><div class="thumbnail__name button"></div>
+        </div>
+        <div data-template="thumbnail" class="thumbnail">
+            <div class="thumbnail__card">
+                <div class="thumbnail__top">
+                    <div class="name"></div>
+                    <div class="thumbnail__labels small"></div>
+                </div>
+                <div class="thumbnail__bottom">
+                    <div class="thumbnail__media"></div>
+                    <div class="thumbnail__description">
+                    </div>
+                </div>
+                <div class="thumbnail__footer">
+                    <div class="thumbnail__maximize button middle">file</div>
+                    <div class="thumbnail__context button middle">context</div>
+                </div>
+            </div>
+            <div class="thumbnail__add button">
+                <div>&#8593; add to notepad</div>
+            </div>
+        </div>
+    </div>
+    <script src="http://www.alternator.space/dist/notepad.js"></script>
+</body>
+</html>

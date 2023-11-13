@@ -1,0 +1,5 @@
+.container *,
+.container {
+    scrollbar-gutter: auto;
+    line-height: 21pt;
+}

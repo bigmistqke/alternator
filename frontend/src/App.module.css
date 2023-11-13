@@ -1,0 +1,75 @@
+.headerBig {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.headerSmall {
+  display: none;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 950px) {
+  .headerBig {
+    display: none;
+  }
+  .headerSmall {
+    display: block;
+  }
+}
+
+.menu{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: white;
+}
+
+.darkMode.menu{
+  background: black;
+}
+
+
+
+.row > * {
+  display: inline-block;
+}
+.row {
+  display: block;
+  width: 100%;
+  line-height: 20px;
+}
+
+.row a {
+  cursor: pointer;
+}
+
+.logo {
+  height: 70px;
+  margin-bottom: -29px;
+  margin-top: -35px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.topLayer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.darkMode {
+  height: 100vh;
+}

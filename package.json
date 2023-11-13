@@ -1,21 +1,30 @@
 {
-  "name": "vite-template-solid",
-  "version": "0.0.0",
+  "name": "alternator",
+  "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "vite",
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "start": "concurrently \"cd frontend && yarn start\" \"cd backend && yarn dev\" ",
+    "dev": "pnpm run start",
+    "build": "concurrently \"cd frontend && yarn build\" \"cd backend && yarn build\" "
   },
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincentvandijck/alternator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vincentvandijck/alternator/issues"
+  },
+  "homepage": "https://github.com/vincentvandijck/alternator#readme",
   "devDependencies": {
-    "vite": "^2.9.9",
-    "vite-plugin-solid": "^2.2.6"
+    "concurrently": "^7.3.0"
   },
-  "dependencies": {
-    "fals": "^1.0.0",
-    "solid-app-router": "^0.3.3",
-    "solid-js": "^1.4.2"
+  "pnpm": {
+    "patchedDependencies": {
+      "solid-app-router@0.4.2": "patches/solid-app-router@0.4.2.patch"
+    }
   }
 }

@@ -1,0 +1,507 @@
+.tags {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tag {
+  display: flex;
+  flex: 0.5;
+  min-height: var(--width);
+  line-height: var(--width);
+  text-transform: capitalize;
+  font-size: 20pt;
+  width: calc(100% - 33pt);
+  cursor: pointer;
+  padding-right: 2.5px;
+}
+
+.tag:nth-child(odd) {
+  border-right: 1px solid white;
+}
+
+.tag label {
+  padding-left: 10px;
+  flex: 1;
+  cursor: pointer;
+}
+.checkbox {
+  width: 20pt;
+  flex: 0 0 var(--width);
+  display: flex;
+  border-right: 1px solid white;
+}
+
+.checkbox.checked > * {
+  background: white;
+  border-radius: 50%;
+  margin: 5px;
+  height: calc(var(--width) - 10px);
+  width: calc(var(--width) - 10px);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+:root {
+  --top-height: 150px;
+  --big-padding: 4pt;
+  --width: 32pt;
+  --middle: 18pt;
+}
+
+@media only screen and (max-width: 1000px) {
+  :root {
+    --middle: 14pt;
+  }
+}
+
+
+::selection {
+  background: white;
+  color: black;
+}
+.no-mobile .button:not(.selected):active,
+.no-mobile .button:not(.selected):focus,
+.no-mobile .button:not(.selected):hover {
+  background: white !important;
+  color: black !important;
+  z-index: 1;
+}
+.selected.button,
+.selected .button,
+.selected a {
+  background: white;
+  color: black;
+}
+#templates {
+  display: none;
+}
+#content {
+  border-top: 1px solid white;
+  margin-top: 30px;
+  width: 100vw;
+  max-height: 100%;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+}
+
+@media only screen and (max-width: 950px) {
+  #content {
+    flex-direction: column;
+  }
+  .right{
+    border-left: none !important;
+    border-top: 5px solid white;
+  }
+}
+
+#content > div {
+  flex: 1;
+  /* height: 100%; */
+  position: relative;
+  display: inline-flex;
+}
+.big {
+  font-size: var(--width);
+  padding: var(--big-padding);
+  line-height: var(--width);
+  user-select: none;
+}
+.middle {
+  font-size: var(--middle);
+  padding: var(--big-padding);
+  line-height: var(--width);
+}
+.button {
+  user-select: none;
+  cursor: pointer;
+  text-align: center;
+}
+.left {
+  border-right: 1px solid white;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.border {
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+#submit {
+  text-align: center;
+}
+.label {
+  width: 50%;
+  display: inline-block;
+  line-height: var(--width);
+  border-bottom: 1px solid white;
+  margin-bottom: -1px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.label:nth-child(2n + 1) {
+  border-right: 1px solid white;
+}
+.label div {
+  display: inline-block;
+  vertical-align: top;
+}
+.label .button {
+  padding-left: 10px;
+}
+.entry__radio-container {
+  width: var(--width);
+  height: var(--width);
+  border-right: 1px solid white;
+  position: relative;
+  cursor: pointer;
+}
+.entry__name {
+  padding-left: 8pt;
+  text-transform: capitalize;
+  font-size: 20pt;
+  width: calc(100% - 33pt);
+}
+.entry__radio {
+  border-radius: 8pt;
+  background: white;
+  position: absolute;
+  width: 16pt;
+  height: 16pt;
+  vertical-align: top;
+  top: 8pt;
+  left: 8pt;
+  padding: 8pt;
+  opacity: 0;
+}
+input {
+  font-size: 16pt;
+  background: transparent;
+  color: white;
+  width: 50%;
+  padding: 8pt;
+  border: 0px solid white;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+#filename {
+  border-right: 1px solid white;
+}
+.bottom {
+  /*position: absolute;*/
+  bottom: 0px;
+  border-top: 1px solid white;
+  width: 100%;
+}
+.bottom {
+  text-align: center;
+}
+#notebook_bottom > div {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+.hover:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  user-select: none;
+}
+
+#placeholder {
+  color: grey;
+}
+.half {
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+#notepad,
+#filter {
+  flex: 1;
+}
+.ql-container {
+  font-size: 16pt;
+}
+svg {
+  stroke: white;
+}
+.ql-snow {
+  color: white;
+  border: 0px !important;
+}
+.ql-stroke,
+.ql-picker-label {
+  stroke: white !important;
+  color: white !important;
+  fill: white !important;
+}
+.ql-editor {
+  font-size: 160%;
+}
+.entry:not(:last-child) {
+  border-bottom: 1px solid white;
+}
+
+.l-main-menu__logo {
+  filter: grayscale(1);
+}
+.focus .entry__card {
+  width: 100% !important;
+}
+.focus .entry__add {
+  display: none;
+}
+
+.media__source-container,
+.media__source-container * {
+  width: 100%;
+}
+.entry__top {
+  border-bottom: 1px solid white;
+  width: 100%;
+  display: flex;
+}
+
+.entry__maximize {
+  border-right: 1px solid white;
+}
+
+.result,
+.focus {
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.result__header,
+.focus__header {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  height: calc(var(--width) + var(--big-padding) * 2);
+  flex: 0 0 auto;
+}
+.result__header > div {
+  display: inline-block;
+}
+.title {
+  text-transform: capitalize;
+  padding-left: 8pt;
+}
+.result__header .title,
+.focus__header .title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1;
+}
+#result {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.name {
+  display: inline-block;
+  padding-left: 8pt;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.result > .top > div:first-child {
+  border-right: 1px solid white;
+  flex: 1;
+}
+.result__back,
+.focus__back {
+  float: right;
+  line-height: 16pt;
+  padding: 4pt;
+  text-align: center;
+  font-size: 16pt;
+  border-left: 1px solid white;
+}
+.ql-snow button {
+  height: 20pt !important;
+}
+.ql-toolbar {
+  min-height: 33pt;
+  border-bottom: 1px solid white !important;
+}
+.result iframe {
+  height: 500px;
+  border: 0px;
+}
+.gutter {
+  background: white;
+  cursor: ew-resize;
+}
+.warning {
+  background: white;
+  color: black;
+  pointer-events: none;
+  animation: blink 0.5s infinite;
+}
+.controls {
+  background: black !important;
+  color: white !important;
+}
+.controls__timeline,
+.controls__now {
+  background: white !important;
+}
+@keyframes blink {
+  0% {
+    background: white;
+    color: black;
+  }
+  50% {
+    background: black;
+    color: white;
+  }
+  100% {
+    background: white;
+    color: black;
+  }
+}
+
+.name {
+  flex: 1;
+}
+.result__themes {
+  padding-right: 0pt;
+}
+.small {
+  font-size: 12pt;
+  padding: 8pt;
+  line-height: 12pt;
+  text-transform: capitalize;
+  vertical-align: baseline;
+}
+
+.categories {
+  color: grey;
+}
+.ql-iframe {
+  width: 50%;
+  text-align: center;
+}
+.blink {
+  animation: blink 0.5s infinite;
+}
+@keyframes blink {
+  50% {
+    background: white;
+    color: black;
+  }
+}
+.link {
+  color: white !important;
+  /*text-decoration: underline;*/
+  user-select: none;
+  text-align: center !important;
+}
+.link * {
+  text-decoration: underline;
+}
+
+.right {
+  display: flex;
+  border-left: 2px solid white;
+}
+
+.notepad {
+  height: 100%;
+  flex: 1;
+  overflow: auto;
+  padding: 8pt;
+}
+
+.result__container {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.entry {
+  display: inline-flex;
+  overflow: unset;
+  border-bottom: 1px solid white;
+  z-index: 1;
+}
+
+.entry__header {
+  display: flex;
+  line-height: var(--width);
+  border-bottom: 1px solid white;
+}
+.entry__name {
+  flex: 1;
+  font-size: 20pt;
+}
+.entry__tag {
+  font-size: 12pt;
+  padding: 4pt;
+}
+
+.entry__content_container {
+  display: flex;
+}
+
+.entry__content {
+  padding: 5px;
+  overflow: auto;
+  flex: 1;
+}
+.entry__content > * {
+  width: 100%;
+}
+
+.entry__description {
+  flex: 1;
+}
+
+.entry__card {
+  display: inline-block;
+  /* border-right: 1px solid white; */
+  z-index: 1;
+  flex: 1;
+}
+.entry__add {
+  display: block;
+  overflow: unset;
+  width: var(--width);
+  background: black;
+  z-index: 0;
+  /* box-shadow: 0px 0px 50px black, 0px 0px 25px black, 0px 0px 12.5px black; */
+  border-left: 1px solid white;
+}
+.entry__add > div {
+  width: var(--width);
+  font-size: 18pt;
+  text-align: center;
+  vertical-align: top;
+  position: sticky;
+  top: 0px;
+  transform: rotateZ(90deg);
+  margin-top: 14pt;
+  overflow: unset;
+  top: 14pt;
+  white-space: nowrap;
+}
+
+.entry__footer {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid white;
+  font-size: 20pt;
+}
+.entry__footer * {
+  flex: 1;
+  text-align: center;
+  line-height: var(--width);
+}
+.entry__footer *:not(:first-child) {
+  border-left: 1px solid white;
+}

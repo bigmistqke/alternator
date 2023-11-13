@@ -1,0 +1,14 @@
+.intro {
+  display: flex;
+  font-size: 10pt;
+  background: white;
+  box-shadow: 0px 0px 50px #00000029;
+  padding: 2px;
+  white-space: pre-wrap;
+}
+
+.intro_container {
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
